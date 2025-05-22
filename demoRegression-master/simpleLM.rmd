@@ -70,4 +70,21 @@ Best to worst by RSE
 NECK RSE: 43.91      
 LENGTH RSE: 61.83     
 HEADLEN RSE: 67.81         
+HEADWTH RSE: 76.41
+
+```{r}
+mCHEST <- lm(WEIGHT~CHEST,data=bears)
+plot(WEIGHT~CHEST,data=bears)
+abline(mCHEST)
+summary.lm(mCHEST)
+```
+
+In this final plot, we see that the residual standard error is 33.08, and the adjusted R-squared is 0.962.   
+
+
+Best to worst by RSE     
+CHEST RSE: 33.08    
+NECK RSE: 43.91      
+LENGTH RSE: 61.83     
+HEADLEN RSE: 67.81         
 HEADWTH RSE: 76.41  
