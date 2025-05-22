@@ -55,3 +55,19 @@ Best to worst by RSE
 NECK RSE: 43.91     
 HEADLEN RSE: 67.81       
 HEADWTH RSE: 76.41 
+
+
+```{r}
+mLENGTH <- lm(WEIGHT~LENGTH,data=bears)
+plot(WEIGHT~LENGTH,data=bears)
+abline(mLENGTH)
+summary.lm(mLENGTH)
+```
+
+In this plot, we can see that the RSE is 61.83 and the adjusted R-squared is 0.7423.
+
+Best to worst by RSE      
+NECK RSE: 43.91      
+LENGTH RSE: 61.83     
+HEADLEN RSE: 67.81         
+HEADWTH RSE: 76.41  
