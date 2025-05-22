@@ -37,5 +37,21 @@ abline(mHEADLEN)
 summary.lm(mHEADLEN)
 ```
 
-According to the observations, the residual standard error is 67.81, and our adjusted R-squared is 0.69.
+According to the observations, the residual standard error is 67.81, and our adjusted R-squared is 0.69. 
 
+At the moment, the best model is WEIGHT~NECK(RSE: 43.91) followed by WEIGHT~HEADLEN(67.81). 
+
+
+```{r}
+mHEADWTH <- lm(WEIGHT~HEADWTH,data=bears)
+plot(WEIGHT~HEADWTH,data=bears)
+abline(mHEADWTH)
+summary.lm(mHEADWTH)
+```
+
+In his plot, the residual standard error is 76.41 and the adjusted R squared is 0.6064. 
+
+Best to worst by RSE    
+NECK RSE: 43.91     
+HEADLEN RSE: 67.81       
+HEADWTH RSE: 76.41 
